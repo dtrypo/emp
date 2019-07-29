@@ -455,7 +455,7 @@ select {
 
 .left-slide::after {
     content: "";
-    background-image: url(/img/img-outer.png);
+    background-image: url(img-outer.png);
     background-position: center center;
     background-size: contain;
     position: absolute;
