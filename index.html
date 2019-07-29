@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <link href="https://vjs.zencdn.net/7.6.0/video-js.css" rel="stylesheet" />
+    <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+</head>
+
+<body>
+    <section id="topSection" class="headline mjncolor">
+        <div class="wrapper-site flex flex-center flex-column">
+            <div class="logo-box">
+                <img src="/img/mjnlogo-retina.png" width="75" height="75" alt="logo" />
+            </div>
+            <h1>Ψάχνεις προσωπικό;</h1>
+            <p>
+                Βρείτε πάνω από 20 ειδικότητες στους τομείς του τουρισμού,της λιανικής
+                και της εστίασης.
+            </p>
+        </div>
+    </section>
+    <section class="hero smoke">
+        <div class="wrapper-site flex">
+            <div class="section-left">
+                <video id="my-video" class="video-js" controls preload="auto" data-setup="{}">
+                    <source src="https://cvmjn.s3-eu-west-1.amazonaws.com/Explainer+video+long_FINAL.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <div class="section-right">
+                <div class="hero-card">
+                    <form id="empForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <h4>
+                                    Συμπλήρωσε την φόρμα και η ομάδα του MyJobNow θα σε καλέσει
+                                    άμεσα για να σε βοηθήσει να βρεις το κατάλληλο προσωπικό για
+                                    την επιχείρησή σου.
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="form-row flex">
+                            <div class="form-group">
+                                <label for="name">Επωνυμία Επιχείρησης (*)</label>
+                                <input type="text" name="CompanyΝame" id="companyName" placeholder="MyJobNow"
+                                    required />
+                            </div>
+                        </div>
+                        <div class="form-row flex">
+                            <div class="form-group">
+                                <label for="name">Ονοματεπώνυμο (*)</label>
+                                <input type="text" name="name" id="name" placeholder="Δημήτρης Παπαδόπουλος" required />
+                            </div>
+                        </div>
+                        <div class="form-row flex">
+                            <div class="form-group">
+                                <label for="phone">Τηλέφωνο (*)</label>
+                                <input type="tel" name="phone" id="phone" placeholder="6999999999" required />
+                            </div>
+                        </div>
+                        <div class="form-row flex">
+                            <div class="form-group">
+                                <label for="email">Email (*)</label>
+                                <input type="text" name="email" id="email" placeholder="test@test.com" required />
+                            </div>
+                        </div>
+                        <div class="form-row flex">
+                            <div class="form-group">
+                                <label for="skill">Ψάχνετε για (*)</label>
+                                <select name="skill" id="skill">
+                                    <option value="Σερβιτόροι">Σερβιτόροι</option>
+                                    <option value="Bartender">Bartender</option>
+                                    <option value="Barista_Μπουφέ">Barista - Μπουφέ</option>
+                                    <option value="Πωλητές_Ταμίες">Πωλητές - Ταμίες</option>
+                                    <option value="Delivery">Delivery</option>
+                                    <option value="Μάγειρες">Μάγειρες</option>
+                                    <option value="Ψήστες_Παρασκευαστές">Ψήστες - Παρασκευαστές</option>
+                                    <option value="Υποδοχή_Μετρ">Υποδοχή - Μετρ</option>
+                                    <option value="Κομμωτική">Κομμωτική</option>
+                                    <option value="Αισθητική">Αισθητική</option>
+                                    <option value="Τηλεφωνικό_Κέντρο">Τηλεφωνικό Κέντρο</option>
+                                    <option value="Υπάλληλοι_Γραφείου">Υπάλληλοι Γραφείου</option>
+                                    <option value="Ρεσεψιόν">Ρεσεψιόν</option>
+                                    <option value="Καμαριέρα">Καμαριέρα</option>
+                                    <option value="Αρτοποιοί">Αρτοποιοί</option>
+                                    <option value="Λάντζα">Λάντζα</option>
+                                    <option value="Αποθηκάριοι">Αποθηκάριοι</option>
+                                    <option value="Οδηγοί">Οδηγοί</option>
+                                    <option value="Καθαρισμός">Καθαρισμός</option>
+                                    <option value="Άλλο">Άλλο</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row flex">
+                            <div class="form-group">
+                                <small>Συμπληρώνοντας αυτή την φόρμα συνενείται στους
+                                    <a href="https://www.myjobnow.com/terms-of-service" target="_blank">Όρους Χρήσης</a>
+                                    καθώς και στην
+                                    <a href="https://www.myjobnow.com/privacy-policy" target="_blank">Πολιτική
+                                        Απορρήτου</a>
+                                    του MyJobNow</small>
+                            </div>
+                        </div>
+                        <div class="form-row flex">
+                            <div class="form-group">
+                                <button id="submitIt" class="btn" type="submit" style="width: 100%;">
+                                    ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΟΥ
+                                </button>
+                            </div>
+                        </div>
+                        <div class="form-row flex">
+                            <div class="form-group">
+                                <small style="color: #aaa;">(*) Αυτά τα πεδία απαιτούνται</small>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial smoke">
+        <div class="wrapper-site flex">
+            <div class="section-left flex">
+                <div class="testimonial-box flex">
+                    <img src="testimonials1.jpg" alt="testimonials" width="75" height="75" />
+                    <p class="testimonialsText">
+                        "Θεωρώ ότι η εφαρμογή είναι εξαιρετικά user friendly και
+                        απαραίτητη, γιατί βασικό χαρακτηριστικό της εστίασης είναι το
+                        μεγάλο turn over, δηλαδή άνθρωποι πάνε και έρχονται όλη την ώρα
+                        ειδικά στο πόστο του σέρβις, οπότε πρέπει να ψάχνεις συνεχώς
+                        προσωπικό"
+                    </p>
+                </div>
+            </div>
+            <div class="section-right"></div>
+        </div>
+    </section>
+    <section class="how">
+        <div class="wrapper-site flex">
+            <div class="section-left flex flex-column">
+                <br />
+                <p>
+                    Το MyJobNow είναι μια online πλατφόρμα που βοηθάει επιχειρήσεις
+                    εστίασης και καταστήματα λιανικής να προσλάβουν προσωπικό. Μέσα στην
+                    εφαρμογή του MyJobNow εργοδότες και υποψήφιοι εργαζόμενοι μπορούν να
+                    συνδεθούν και να ανακαλύψουν ευκαιρίες συνεργασίας με απλό και άμεσο
+                    τρόπο.
+                </p>
+                <br />
+                <br />
+                <h3>Μπορείς να ξεκινήσεις να βρίσκεις προσωπικό σε 4 απλά βήματα:</h3>
+                <br />
+                <ol>
+                    <li>
+                        Γράφεις μια σύντομη περιγραφή για τη θέση και συμπληρώνεις τις
+                        προτιμήσεις σου (ηλικία, τοποθεσία, εργασιακή εμπειρία)
+                    </li>
+                    <li>
+                        Το MyJobNow βρίσκει τους υποψηφίους που ταιριάζουν στο προφίλ του
+                        εργαζόμενου που ψάχνεις.
+                    </li>
+                    <li>
+                        Λαμβάνεις αιτήσεις και βλέπεις τις φωτογραφίες και τα βίντεο των
+                        υποψηφίων, την εργασιακή τους εμπειρία και την απόστασή τους από
+                        την επιχείρησή σου.
+                    </li>
+                    <li>
+                        Μιλάς μόνο με τους υποψήφιους που σε ενδιαφέρουν μέσω chat ή
+                        τηλεφώνου. Ρωτάς παραπάνω πληροφορίες και κανονίζεις συνέντευξη.
+                    </li>
+                </ol>
+            </div>
+            <div class="section-right">
+                <div class="testimonial-box testimonial-box2 flex">
+                    <img src="testimonials2.jpg" alt="testimonials" width="75" height="75" />
+                    <p class="testimonialsText">
+                        "Είναι πολύ βολικό το φορμάτ του MyJobNow, αφού, σε αντίθεση με
+                        τους παραδοσιακούς τρόπους αναζήτησης προσωπικού, μπορείς να έχεις
+                        όλη την πληροφορία που χρειάζεσαι συγκεντρωμένη στο κινητό σου.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="punchLine mjncolor">
+        <div class="wrapper-site flex flex-center">
+            <h2>Βρες προσωπικο, εύκολα και γρήγορα!</h2>
+        </div>
+    </section>
+    <section class="features">
+        <div class="wrapper-site flex flex-center">
+            <div class="flex steps-slide" onmouseover="stopLoop()" onmouseout="startLoop()">
+                <div class="left-slide">
+                    <img id="slideImage1" class="mySlides" src="/img/imgInner1.png" alt="app">
+                    <img id="slideImage2" class="mySlides" src="/img/imgInner2.png" alt="app">
+                    <img id="slideImage3" class="mySlides" src="/img/imgInner3.png" alt="app">
+                    <img id="slideImage4" class="mySlides" src="/img/imgInner4.png" alt="app">
+                    <div class="shadow">
+                    </div>
+                    <button class="arrow-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="arrow-display-right" onclick="plusDivs(+1)">&#10095;</button>
+                </div>
+                <div class="right-slide">
+                    <h2 class="headline">Με το MyJobNow</h2>
+                    <div class="slide-text">
+                        <div class="mySlidesText">
+                            <p>Δημιουργείς την αγγελία σου πιο εύκολα από ποτέ. Ορίζεις όλες σου τις προτιμήσεις για τον ιδανικό υποψήφιο καθώς και όλες τις λεπτομέριες για την θέση εργασίας.</p>
+                        </div>
+                        <div class="mySlidesText">
+                            <p>
+                                Το MyJobNow βρίσκει τους υποψηφίους που ταιριάζουν στο προφίλ του εργαζόμενου που ψάχνεις.
+                            </p>
+                        </div>
+                        <div class="mySlidesText">
+                            <p>
+                                Λαμβάνεις αιτήσεις και βλέπεις τις φωτογραφίες και τα βίντεο των υποψηφίων, την εργασιακή τους εμπειρία και την απόστασή τους από την επιχείρησή σου.
+                            </p>
+                        </div>
+                        <div class="mySlidesText">
+                            <p>
+                                Μιλάς μόνο με τους υποψήφιους που σε ενδιαφέρουν μέσω chat ή τηλεφώνου. Ρωτάς
+                                παραπάνω
+                                πληροφορίες και κανονίζεις συνέντευξη.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="closing smoke">
+        <div class="wrapper-site flex flex-center flex-column">
+            <h2>
+                Δοκιμάστε το MyJobNow για 4 μέρες εντελώς δωρεάν!
+            </h2>
+            <a href="#topSection" class="btn">ΞΕΚΙΝΑ ΤΩΡΑ</a>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
